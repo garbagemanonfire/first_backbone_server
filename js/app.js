@@ -59,7 +59,7 @@ $(function () { //wait for on ready
 
         initialize: function(){
             this.newRandomNumber();
-            this.numberDescription(this.newRandomNumber());
+            this.numberDescription(this.get('rannum'));
         },
 
         newRandomNumber: function (){
@@ -94,7 +94,7 @@ $(function () { //wait for on ready
     desc.listenTo(myModel, 'change', desc.render);
 
     window.app = app;
-    window.desc = desc;
+    // window.desc = desc;
 });
 
 
