@@ -8,6 +8,7 @@ $(function () { //wait for on ready
         },
 
         initialize: function(){
+            this.listenTo(myModel, 'change', this.render);
             this.render();
         },
 
@@ -36,6 +37,7 @@ $(function () { //wait for on ready
         },
 
         initialize: function(){
+            this.listenTo(myModel, 'change', this.render);
             this.render();
         },
 
@@ -90,8 +92,8 @@ $(function () { //wait for on ready
     var app = new AppView({model: myModel});
     var desc = new AppDesc({model: myModel})
 
-    app.listenTo(myModel, 'change', app.render);
-    desc.listenTo(myModel, 'change', desc.render);
+
+
 
     window.app = app;
     // window.desc = desc;
